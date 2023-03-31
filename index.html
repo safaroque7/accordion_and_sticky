@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion with Venila Javascript</title>
+
+    <style>
+      div#accordion {
+        width: 500px;
+        margin: auto;
+      }
+
+      .title_sign {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header {
+        border: 1px solid #000;
+        padding: 10px;
+        background: #999;
+      }
+
+      .title_sign {
+        background: green;
+        color: #fff;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .minus-sign,
+      .content,
+      .display-none {
+        display: none;
+      }
+      .display-block {
+        display: block;
+      }
+
+      .red-class {
+        background: red;
+      }
+
+      .minus {
+        font-size: 54px;
+        font-weight: bold;
+      }
+
+      .stickyClass{
+        position: fixed;
+        transition: all 0.5s;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="accordion">
+      <!-- header start 1 -->
+      <div class="header">
+        <div class="title_sign">
+          <div class="title"><h3>lesson 1</h3></div>
+          <div class="sign">
+            <span class="plus-sign"> + </span>
+            <span class="minus-sign"> - </span>
+          </div>
+        </div>
+        <div class="content">
+          <p>
+            Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson
+            1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1,
+            Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson
+            1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1,
+            Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson
+            1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1,
+            Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson
+            1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1,
+            Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson
+            1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1,
+            Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson 1, Lesson
+            1,
+          </p>
+        </div>
+      </div>
+      <!-- header end 1 -->
+
+      <!-- header start 2 -->
+      <div class="header">
+        <div class="title_sign">
+          <div class="title"><h3>lesson 2</h3></div>
+          <div class="sign">
+            <span class="plus-sign"> + </span>
+            <span class="minus-sign"> - </span>
+          </div>
+        </div>
+        <div class="content">
+          <p>
+            Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson
+            2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2,
+            Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson
+            2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2,
+            Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson
+            2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2,
+            Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson
+            2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2,
+            Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson 2, Lesson
+            2, Lesson 2
+          </p>
+        </div>
+      </div>
+      <!-- header end 2 -->
+
+      <!-- header start 3 -->
+      <div class="header">
+        <div class="title_sign">
+          <div class="title"><h3>lesson 3</h3></div>
+          <div class="sign">
+            <span class="plus-sign"> + </span>
+            <span class="minus-sign"> - </span>
+          </div>
+        </div>
+        <div class="content">
+          <p>
+            Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson
+            3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3,
+            Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson
+            3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3,
+            Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson
+            3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3,
+            Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson
+            3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3,
+            Lesson 3, Lesson 3, Lesson 3, Lesson 3, Lesson 3
+          </p>
+        </div>
+      </div>
+      <!-- header end -->
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia ea eligendi ab neque amet itaque nam nostrum incidunt blanditiis, explicabo eius? Minima illo in eaque neque. Enim repellat architecto reprehenderit veritatis veniam corrupti eos iusto, ipsam quas, voluptatem ex odit sed nisi repudiandae nemo, minus ea. Repudiandae provident blanditiis corporis molestiae aperiam atque recusandae nostrum officia, delectus explicabo obcaecati magnam labore sint, nemo qui perspiciatis error dolore molestias excepturi eius quisquam. Vitae fugiat architecto ipsa repellat atque laborum dolorum accusantium nisi a animi. Cum tempore tempora at dolorum sint! Accusantium quia eaque unde quae culpa alias earum quos voluptatum atque cupiditate quibusdam sit, dicta eveniet ea corrupti distinctio iusto animi. Totam explicabo mollitia consequatur, similique tempora id nisi est assumenda ipsa delectus soluta, aspernatur quidem vel qui eos odit, fugit impedit? Cum modi dolorem architecto possimus ex rem totam! Sit, similique amet cupiditate sed possimus et, laudantium placeat iure nam earum maxime nostrum suscipit aspernatur in quibusdam expedita doloribus culpa nemo dolor a dicta facilis mollitia debitis? Possimus maiores, ullam minima veritatis delectus a nam laborum eum alias! Magnam distinctio numquam quasi ipsum culpa consequuntur id laborum amet eveniet repellendus quae necessitatibus nostrum ut asperiores odio rem quis dolore rerum fugit, laboriosam recusandae pariatur iste exercitationem. Sed, doloribus ipsa? Veniam quaerat incidunt praesentium consequuntur, adipisci nobis voluptatibus asperiores atque pariatur a minima corrupti doloribus cumque blanditiis quasi voluptas dolore animi quis possimus itaque quisquam. Fugit autem quos debitis suscipit velit aspernatur nisi natus, voluptas officia culpa eum quae esse dolore eligendi mollitia dolores cum! Beatae delectus rem facere obcaecati quo aut commodi minus illo nobis, repellendus rerum, ad quaerat! Commodi molestias, nihil autem sit dicta tenetur. Eos non cum similique repudiandae quae obcaecati voluptates neque facere quasi exercitationem doloribus provident voluptatibus consectetur corporis itaque ipsum nam iste necessitatibus ullam, repellat animi illum nostrum distinctio! Velit provident autem voluptas, veritatis sequi non id sit officia, reiciendis tempore quidem pariatur eum dolorum cum, totam laborum excepturi. Fugit sed alias debitis odit officiis. Cupiditate veritatis necessitatibus excepturi quia ipsam temporibus mollitia dignissimos, culpa tempora illo, placeat nostrum inventore natus sequi hic quod, illum porro odio. Debitis iste eaque nesciunt nobis nisi repudiandae! Eaque, architecto aliquam quaerat qui quisquam incidunt consequuntur esse quibusdam nemo doloribus quod temporibus maxime omnis nobis reiciendis recusandae inventore officia ipsam a quae libero? Obcaecati nisi vitae aspernatur voluptatem sint quae ipsam adipisci incidunt cum, dolorem magnam amet, fugiat eos beatae est et ipsa nihil natus atque molestias commodi. Perspiciatis facere sunt voluptas quisquam officia vitae voluptate minima dolores cumque? Unde consectetur sunt voluptas nulla, sint minus porro placeat quod harum nesciunt magni laudantium, eum, quasi sit perferendis soluta. Explicabo atque, eaque incidunt rerum voluptates velit maxime vel voluptatum obcaecati eos. Nam at fugit blanditiis sit ipsum porro non nisi laudantium saepe, voluptate facilis reiciendis voluptatum eligendi alias itaque ad officiis similique natus tenetur repellendus quisquam qui, et dolores accusantium. Laboriosam nemo nam, optio fugiat quis consectetur! Corporis expedita repellendus consequuntur sit itaque nihil nemo perferendis illum sint laborum.
+    </p>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
